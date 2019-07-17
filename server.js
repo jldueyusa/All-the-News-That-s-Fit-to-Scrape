@@ -14,3 +14,7 @@ app.use(
         extended: false
     })
 );
+//set app engine
+var exphbs = require("express-handlebars");
+app.engine("handlebars", exphbs({defaultLayout: "main"})
+);
