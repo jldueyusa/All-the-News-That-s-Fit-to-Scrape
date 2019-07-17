@@ -14,6 +14,10 @@ app.use(
         extended: false
     })
 );
+//connect to public
+app.use(express.static(process.cwd() + "/public"));
+
+
 //set app engine
 var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({defaultLayout: "main"})
